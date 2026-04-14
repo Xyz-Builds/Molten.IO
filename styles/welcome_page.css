@@ -1,0 +1,382 @@
+@keyframes darken_in1 {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.95);
+  }
+}
+
+@keyframes slideIn_left {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 80px;
+  }
+}
+
+@keyframes slideIn_left2 {
+  0% {
+    left: -670px;
+  }
+  100% {
+    left: 80px;
+  }
+}
+
+.welcome_section .bg {
+  animation: darken_in1 4s forwards;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 750px;
+  object-fit: cover;
+}
+
+.welcome_section h1,
+.welcome_section h2 {
+  top: 40px;
+  position: relative;
+  letter-spacing: 1px;
+  color: white;
+  left: 40px;
+  font-size: 40px;
+  font-family: Major Mono Display;
+  z-index: 2;
+}
+
+.welcome_section h2 {
+  animation: slideIn_left 4s forwards;
+  font-family: Poiret One;
+}
+
+.welcome_section strong {
+  background: linear-gradient(to right, rgb(154, 177, 194), white);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.welcome_section b {
+  background: linear-gradient(to right, rgb(243, 144, 139), white);
+  font-weight: 300;
+  font-size: 50px;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.welcome_section .label {
+  animation: slideIn_left 3s forwards;
+  font-size: 80px;
+}
+
+.welcome_section .label2 {
+  animation: slideIn_left2 6s forwards;
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.brief_gif {
+  width: 500px;
+  position: relative;
+  top: 300px;
+  left: 25px;
+}
+
+.brief h1,
+.brief h2,
+.brief_2 h1,
+.brief_2 h2 {
+  position: relative;
+  font-family: Poiret One;
+  top: -60px;
+  left: 450px;
+}
+
+.brief h1 {
+  background: linear-gradient(to right, rgb(95, 103, 237), black, black);
+  color: transparent;
+  font-size: 53px;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.darkMode .brief h1 {
+  background: linear-gradient(to right, rgb(38, 41, 88), white, white);
+  font-weight: bold;
+  color: transparent;
+  font-size: 53px;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.brief_2 h1 {
+  background: linear-gradient(to right, rgb(242, 172, 97), black, black);
+  color: transparent;
+  font-size: 53px;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.darkMode .brief_2 h1 {
+  background: linear-gradient(to right, rgb(242, 172, 97), white, white);
+  color: transparent;
+  font-size: 53px;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.brief h2 .brief_2 h2 {
+  font-size: 37px;
+  top: -70px;
+}
+
+.brief_2 {
+  margin-top: -150px;
+  margin-bottom: 290px;
+}
+
+.benefits {
+  position: relative;
+  left: 40px;
+}
+
+.benefits-examples {
+  display: flex;
+  gap: 6%;
+}
+
+.benefits h1 {
+  font-family: Poiret One;
+  justify-self: center;
+  font-size: 33px;
+}
+
+.benefits h1 b {
+  background: linear-gradient(to right, rgb(147, 187, 231), black);
+  background-clip: text;
+  color: transparent;
+  font-size: 50px;
+  -webkit-background-clip: text;
+}
+
+.benefits h2 {
+  font-family: Montserrat !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 33px;
+}
+
+.benefits div {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.benefits div img {
+  width: 300px;
+  filter: brightness(0.8);
+}
+
+.benefits div h2,
+.benefits div h3 {
+  position: relative;
+  left: 40px;
+}
+
+.benefits div h2 {
+  background: linear-gradient(to right, rgb(130, 168, 188), black, black);
+  font-size: 40px;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.darkMode .benefits div h2 {
+  background: linear-gradient(
+    to right,
+    rgb(130, 168, 188),
+    white,
+    white,
+    white,
+    white
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.benefits div h3 {
+  font-family: Montserrat;
+  word-spacing: 2px;
+  font-size: 20px;
+}
+
+.darkMode .benefits img {
+  filter: brightness(1);
+}
+
+.darkMode .benefits .gif2 {
+  filter: invert(1);
+}
+
+.darkMode .benefits div h3 {
+  color: white;
+}
+
+.darkMode .benefits h1 b {
+  background: linear-gradient(to right, rgb(147, 187, 231), white);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.darkMode .benefits h1 {
+  color: white;
+}
+
+.join_section {
+  margin-top: 150px;
+  color: white;
+  font-family: Major Mono Display;
+  background: rgb(26, 26, 34);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 30px 40px;
+  min-height: 360px;
+}
+
+.join_section h1,
+.join_section h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+.join_section h2 {
+  font-size: 30px;
+  font-family: Poiret One;
+}
+
+.join_section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.join_section b {
+  color: transparent;
+  background: linear-gradient(to right, rgb(110, 130, 166), white);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.join_section strong {
+  color: transparent;
+  background: linear-gradient(to left, rgb(110, 130, 166), white);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.join_bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  z-index: 0;
+  opacity: 0.65;
+}
+
+.join_section button {
+  color: white;
+  background: rgb(49, 49, 62);
+  border: none;
+  font-family: Montserrat;
+  font-weight: 500;
+  padding: 13px 50px;
+  font-weight: 600;
+  font-size: 17px;
+  position: relative;
+  top: 80px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.join_section button:hover {
+  text-decoration: underline;
+  transform: translateY(-10px);
+}
+
+.advice_section1 {
+  display: flex;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  align-items: center;
+}
+
+.decoration1 {
+  width: 500px;
+  margin-top: 200px;
+}
+
+.advice_section1 h1 {
+  color: white;
+  font-family: Major Mono Display;
+  font-size: 58px;
+  margin-left: 100px;
+  left: 20px;
+}
+
+.advice_section1 h2 {
+  color: white;
+  font-family: Poiret One;
+  font-size: 40px;
+  margin-left: 100px;
+  left: 20px;
+}
+
+.advice_section1 h2 b {
+  font-size: 50px;
+}
+
+@media (max-width: 768px) {
+  .welcome_section h1 {
+    font-size: 40px;
+  }
+
+  .welcome_section h2 {
+    font-size: 30px;
+  }
+
+  .brief_gif {
+    width: 300px;
+    position: relative;
+    top: 70px;
+    left: 20px;
+  }
+
+  .brief h1,
+  .brief h2,
+  .brief_2 h1,
+  .brief_2 h2 {
+    top: -205px;
+    left: 325px;
+  }
+
+  .brief h1,
+  .brief_2 h1 {
+    font-size: 36px;
+  }
+
+  .brief h2,
+  .brief_2 h2 {
+    font-size: 28px;
+  }
+}

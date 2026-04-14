@@ -1,0 +1,150 @@
+@keyframes slideIn_up {
+  0% {
+    top: -73px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: Poiret One;
+  font-weight: bold;
+  transition: transform 0.1s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: translateY(-3px);
+}
+
+.aboutActive .about_button {
+  color: red;
+}
+
+header {
+  animation: slideIn_up 2s forwards;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.00001);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 70px;
+  width: 90%;
+  border-radius: 100px;
+  position: fixed;
+  z-index: 1000;
+}
+
+header .divider {
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 0.09mm;
+  background-color: white;
+  border: none;
+  margin: 0;
+}
+
+.header_items {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+header img {
+  position: relative;
+  width: 45px;
+  height: 43px;
+  bottom: 1px;
+  left: 23px;
+}
+
+header .theme_button {
+  visibility: hidden;
+  position: relative;
+  margin-left: auto;
+  right: 20px;
+  border-radius: 100%;
+  border: 1px gray solid;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6.5px;
+  padding-right: 6.5px;
+  font-size: 23px;
+  transition: filter 0.2s ease-in-out;
+}
+
+header .theme_button:hover {
+  cursor: pointer;
+  filter: brightness(0.93);
+}
+
+header img:hover {
+  cursor: pointer;
+}
+
+.menu_button {
+  visibility: hidden;
+  background: transparent;
+  border: none;
+  position: relative;
+  margin-left: 2%;
+  top: 3px;
+  right: 45px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu_button:hover {
+  transform: translateY(-3px);
+}
+
+.menu_button img {
+  height: 20px;
+  width: 33px;
+}
+
+.account-buttons {
+  display: flex;
+  gap: 8%;
+}
+
+.sign-up-button,
+.login-button {
+  border-radius: 4px;
+  background-color: rgb(108, 11, 44);
+  border: none;
+  text-wrap-mode: nowrap;
+  color: white;
+  font-family: Montserrat;
+  padding: 10px 15px;
+}
+
+.darkMode .menu_button {
+  filter: invert(1);
+}
+
+.darkMode a {
+  color: white;
+}
+
+.darkMode .theme_button {
+  color: white;
+  background-color: black;
+  border: 2px white solid;
+}
+
+@media (max-width: 768px) {
+  header img {
+    width: 42px;
+    height: 40px;
+  }
+}

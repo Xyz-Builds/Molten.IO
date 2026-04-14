@@ -1,0 +1,69 @@
+@keyframes slideIn_left {
+  0% {
+    left: -850px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.goal_section b {
+  background: linear-gradient(to right, rgb(148, 148, 234), rgb(180, 180, 180));
+  background-clip: text;
+  font-family: Major Mono Display;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.goal_section {
+  animation: slideIn_left 3s forwards;
+  position: relative;
+  line-height: 40px;
+  font-family: Poiret One;
+  padding-left: 9.9%;
+  top: 45px;
+}
+
+.goal_container {
+  background-color: rgb(204, 216, 236);
+  box-shadow: 0 0 25px rgba(105, 138, 255, 0.5);
+  border: 1px rgb(174, 201, 255) solid;
+  border-radius: 30px;
+  width: 700px;
+  padding: 15px 40px;
+  height: fit-content;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+
+.darkMode .goal_container {
+  background-color: rgb(98, 113, 138);
+}
+
+.goal_container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(105, 138, 255, 0.4);
+  cursor: pointer;
+}
+
+.goal_section h1 {
+  background: linear-gradient(to right, rgb(130, 150, 221), black, black);
+  background-clip: text;
+  position: relative;
+  left: 3%;
+  font-size: 33px;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.darkMode .goal_section h1 {
+  background: linear-gradient(to right, rgb(130, 150, 221), white, white);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}

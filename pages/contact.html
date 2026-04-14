@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us! | Molten.IO</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/contact_page.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <main>
+      <section class="contact_section">
+        <section class="contact_column">
+          <h1>Contact Us</h1>
+
+          <hr />
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="0ebe7293-be31-43b5-b55c-aa9cc66b298e"
+            />
+            <input
+              type="text"
+              name="name"
+              placeholder="Please provide your name..."
+              class="name_input"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Please provide your email..."
+              class="email_input"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Say what you wanna say!"
+              required
+              class="message_textarea"
+            ></textarea>
+            <button class="submit_button" type="submit">Submit</button>
+          </form>
+        </section>
+
+        <img class="contact_lottie" src="/elements/contact_lottie.png" />
+      </section>
+    </main>
+
+    <script src="../scripts/header.js"></script>
+    <script src="../scripts/contact.js"></script>
+  </body>
+</html>

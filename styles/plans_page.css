@@ -1,0 +1,31 @@
+@keyframes slideIn_left {
+  0% {
+    left: -550px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.null_msg {
+  animation: slideIn_left 3s forwards;
+  font-family: Major Mono Display;
+  position: relative;
+  justify-self: center;
+  color: rgb(124, 124, 124);
+  font-size: 22px;
+  top: 20px;
+}
+
+.null_msg b {
+  color: black;
+}
+
+.darkMode .null_msg {
+  color: rgb(170, 170, 170);
+}
+
+.darkMode .null_msg b {
+  color: white;
+}

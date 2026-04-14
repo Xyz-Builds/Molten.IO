@@ -1,0 +1,160 @@
+@keyframes slideIn_left {
+  from {
+    transform: translateX(-120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn_right {
+  from {
+    transform: translateX(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.contact_column {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn_left 2s ease-out forwards;
+}
+
+form {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  gap: 10px;
+}
+
+h1 {
+  font-family: Major Mono Display;
+  font-weight: lighter;
+  font-size: 48px;
+  margin: 0;
+}
+
+.darkMode h1 {
+  color: white;
+}
+
+hr {
+  border: 3px rgb(61, 91, 106) solid;
+  border-radius: 50px;
+  margin: 20px 20px 0;
+  margin-bottom: 30px;
+  margin-left: 2px;
+  width: 150px;
+}
+
+.darkMode hr {
+  border: 3px rgb(109, 160, 185) solid;
+}
+
+.name_input,
+.email_input,
+.message_textarea {
+  width: 500px;
+  font-family: Poiret One;
+  border: gray solid 1px;
+  margin-left: -7px;
+  border-radius: 15px;
+  padding: 10px 30px;
+  font-size: 14px;
+}
+
+.darkMode .name_input,
+.darkMode .email_input,
+.darkMode .message_textarea {
+  color: white;
+  background-color: rgb(174, 174, 174);
+}
+
+.darkMode .name_input::placeholder,
+.darkMode .email_input::placeholder,
+.darkMode .message_textarea::placeholder {
+  color: white;
+  font-weight: bold;
+}
+
+.name_input,
+.email_input {
+  height: 35px;
+  border-radius: 50px;
+}
+
+.message_textarea {
+  height: 100px;
+  resize: none;
+}
+
+.submit_button {
+  background: linear-gradient(to right, rgb(117, 255, 172), rgb(85, 202, 204));
+  border-radius: 50px;
+  width: 200px;
+  padding: 13px 10px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-left: -5px;
+  font-size: 17px;
+  font-family: Poiret One;
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.darkMode .submit_button {
+  color: white;
+  background: linear-gradient(to right, rgb(62, 137, 92), rgb(60, 144, 145));
+}
+
+.submit_button:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.contact_lottie {
+  width: 600px;
+  height: 565px;
+  margin-top: -30px;
+  animation: slideIn_right 2s ease-out forwards;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .contact_lottie {
+    width: 400px;
+    height: 365px;
+  }
+
+  .contact_section {
+    margin-top: 40px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  hr {
+    width: 120px;
+  }
+
+  .name_input,
+  .email_input,
+  .message_textarea {
+    width: 300px;
+  }
+}
