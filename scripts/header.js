@@ -12,6 +12,8 @@ fetch(headerPath)
   .then((data) => {
     document.getElementById("header").innerHTML = data;
     fixHeaderLinks();
+    setSiteActiveFromLocation();
+    onSite();
     initTheme();
   })
   .catch((error) => {
@@ -84,10 +86,61 @@ function theme() {
   localStorage.setItem("mode", JSON.stringify(storedTheme));
 }*/
 
-let siteActive = "index_site";
+let siteActive = "index_page";
+
+function setSiteActiveFromLocation() {
+  const pathname = window.location.pathname;
+  const page = pathname.substring(pathname.lastIndexOf("/") + 1).toLowerCase();
+
+  switch (page) {
+    case "about.html":
+      siteActive = "about_page";
+      break;
+    case "careers.html":
+      siteActive = "career_page";
+      break;
+    case "contact.html":
+      siteActive = "contact_page";
+      break;
+    case "plans.html":
+      siteActive = "plans_page";
+      break;
+    case "sign-up.html":
+      siteActive = "signUp_page";
+      break;
+    case "login.html":
+      siteActive = "login_page";
+      break;
+    default:
+      siteActive = "index_page";
+  }
+}
+
+function clearSiteActiveClasses() {
+  document.body.classList.remove(
+    "aboutActive",
+    "careerActive",
+    "contactActive",
+    "plansActive",
+    "signUpActive",
+    "loginActive",
+  );
+}
 
 function onSite() {
-  if (siteActive === "about_site") {
+  clearSiteActiveClasses();
+
+  if (siteActive === "about_page") {
     document.body.classList.add("aboutActive");
+  } else if (siteActive === "career_page") {
+    document.body.classList.add("careerActive");
+  } else if (siteActive === "contact_page") {
+    document.body.classList.add("contactActive");
+  } else if (siteActive === "plans_page") {
+    document.body.classList.add("plansActive");
+  } else if (siteActive === "signUp_page") {
+    document.body.classList.add("signUpActive");
+  } else if (siteActive === "login_page") {
+    document.body.classList.add("loginActive");
   }
 }

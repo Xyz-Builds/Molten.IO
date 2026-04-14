@@ -21,8 +21,26 @@ a:hover {
   transform: translateY(-3px);
 }
 
-.aboutActive .about_button {
-  color: red;
+.aboutActive .about_button,
+.careerActive .career_button,
+.contactActive .contact_button,
+.plansActive .plans_button {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 15px;
+}
+
+.signUpActive .sign-up-button {
+  visibility: hidden;
+}
+
+.loginActive .login-button {
+  visibility: hidden;
+}
+
+.loginActive .account-buttons {
+  flex-direction: row-reverse;
+  margin-right: -20px;
 }
 
 header {
@@ -126,6 +144,22 @@ header img:hover {
   color: white;
   font-family: Montserrat;
   padding: 10px 15px;
+  padding-top: 11px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.sign-up-button:hover,
+.login-button:hover {
+  background-color: rgb(88, 11, 44);
+  transform: translateY(-3px);
+  text-decoration: underline;
+}
+
+.signUpActive .sign-up-button {
+  visibility: hidden;
 }
 
 .darkMode .menu_button {
