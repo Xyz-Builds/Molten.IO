@@ -92,39 +92,24 @@
 .brief_2 h2 {
   position: relative;
   font-family: Poiret One;
-  top: -60px;
-  left: 450px;
+  color: white;
+  top: -130px;
+  left: 470px;
 }
 
 .brief h1 {
-  background: linear-gradient(to right, rgb(95, 103, 237), black, black);
+  background: linear-gradient(to right, rgb(95, 103, 237), white, white);
   color: transparent;
-  font-size: 53px;
+  font-size: 73px;
   background-clip: text;
   -webkit-background-clip: text;
-}
-
-.darkMode .brief h1 {
-  background: linear-gradient(to right, rgb(38, 41, 88), white, white);
   font-weight: bold;
-  color: transparent;
-  font-size: 53px;
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .brief_2 h1 {
-  background: linear-gradient(to right, rgb(242, 172, 97), black, black);
-  color: transparent;
-  font-size: 53px;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.darkMode .brief_2 h1 {
   background: linear-gradient(to right, rgb(242, 172, 97), white, white);
   color: transparent;
-  font-size: 53px;
+  font-size: 73px;
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -149,14 +134,24 @@
   gap: 6%;
 }
 
+.benefits div img {
+  width: 300px;
+}
+
+.benefits div .gif2 {
+  width: 300px;
+  filter: invert(1);
+}
+
 .benefits h1 {
   font-family: Poiret One;
   justify-self: center;
+  color: white;
   font-size: 33px;
 }
 
 .benefits h1 b {
-  background: linear-gradient(to right, rgb(147, 187, 231), black);
+  background: linear-gradient(to right, rgb(147, 187, 231), white);
   background-clip: text;
   color: transparent;
   font-size: 50px;
@@ -177,11 +172,6 @@
   flex-direction: column;
 }
 
-.benefits div img {
-  width: 300px;
-  filter: brightness(0.8);
-}
-
 .benefits div h2,
 .benefits div h3 {
   position: relative;
@@ -189,14 +179,6 @@
 }
 
 .benefits div h2 {
-  background: linear-gradient(to right, rgb(130, 168, 188), black, black);
-  font-size: 40px;
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-}
-
-.darkMode .benefits div h2 {
   background: linear-gradient(
     to right,
     rgb(130, 168, 188),
@@ -206,6 +188,7 @@
     white
   );
   background-clip: text;
+  font-size: 40px;
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -213,30 +196,8 @@
 .benefits div h3 {
   font-family: Montserrat;
   word-spacing: 2px;
+  color: white;
   font-size: 20px;
-}
-
-.darkMode .benefits img {
-  filter: brightness(1);
-}
-
-.darkMode .benefits .gif2 {
-  filter: invert(1);
-}
-
-.darkMode .benefits div h3 {
-  color: white;
-}
-
-.darkMode .benefits h1 b {
-  background: linear-gradient(to right, rgb(147, 187, 231), white);
-  background-clip: text;
-  color: transparent;
-  -webkit-background-clip: text;
-}
-
-.darkMode .benefits h1 {
-  color: white;
 }
 
 .join_section {
@@ -287,7 +248,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
   z-index: 0;
   opacity: 0.65;
 }

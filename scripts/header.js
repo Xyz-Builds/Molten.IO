@@ -53,7 +53,7 @@ function fixHeaderLinks() {
   }
 }
 
-function initTheme() {
+/*function initTheme() {
   const themeButton = document.querySelector(".js-theme");
 
   if (storedTheme.mode === "☽") {
@@ -82,7 +82,7 @@ function theme() {
   }
 
   localStorage.setItem("mode", JSON.stringify(storedTheme));
-}
+}*/
 
 let siteActive = "index_site";
 
