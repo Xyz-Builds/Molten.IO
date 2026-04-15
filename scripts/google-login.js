@@ -9,7 +9,7 @@ document.getElementById("google-login").addEventListener("click", async () => {
   const { error } = await supabaseClient.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: "https://xyz-builds.github.io/Molten.IO/",
+      redirectTo: "https://xyz-builds.github.io/Molten.IO/dashboard.html",
     },
   });
   if (error) console.error(error);
