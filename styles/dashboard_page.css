@@ -6,10 +6,9 @@
   font-family: Major Mono Display;
 }
 
-.greetingH1 img {
-  width: 50px;
-  border-radius: 100%;
-  margin-right: 2px;
-  margin-top: 10px;
-  margin-left: 2px;
+.greetingH1 b {
+  background: linear-gradient(to right, rgb(110, 130, 166), white);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
 }
