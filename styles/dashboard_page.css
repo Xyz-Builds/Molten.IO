@@ -1,3 +1,7 @@
 .greetingH1 {
   color: white;
 }
+
+.greetingH1 img {
+  width: 40px;
+}

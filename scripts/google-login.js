@@ -42,6 +42,6 @@ if (session) {
 
     console.log(name, email, picture);
     document.querySelector(".greetingH1").innerHTML =
-      `Hey there, ${picture} ${name}`;
+      `Hey there, <img src="${picture}" alt="${name}" /> ${name}`;
   }
 })();
