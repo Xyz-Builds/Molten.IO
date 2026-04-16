@@ -41,6 +41,7 @@ if (session) {
     const picture = user.user_metadata.avatar_url;
 
     console.log(name, email, picture);
-    document.querySelector(".greetingH1").innerHTML = `Hey there, ${name}`;
+    document.querySelector(".greetingH1").innerHTML =
+      `Hey there, ${picture} ${name}`;
   }
 })();
