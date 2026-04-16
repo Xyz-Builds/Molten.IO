@@ -1,5 +1,8 @@
 .greetingH1 {
   color: white;
+  position: absolute;
+  top: 40px;
+  left: 60px;
   font-family: Major Mono Display;
 }
 
