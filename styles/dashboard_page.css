@@ -1,7 +1,12 @@
 .greetingH1 {
   color: white;
+  font-family: Major Mono Display;
 }
 
 .greetingH1 img {
-  width: 40px;
+  width: 50px;
+  border-radius: 100%;
+  margin-right: 2px;
+  margin-left: 2px;
+  border: 1px white solid;
 }
