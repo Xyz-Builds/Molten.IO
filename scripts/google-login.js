@@ -45,3 +45,14 @@ if (session) {
       `Hey there, <b>${name}</b>`;
   }
 })();
+
+export async function getUserData() {
+  const {
+    data: { session },
+  } = await supabaseClient.auth.getSession();
+  if (!session) return null;
+  return {
+    name: session.user.user_metadata.full_name,
+    email: session.user.email,
+  };
+}

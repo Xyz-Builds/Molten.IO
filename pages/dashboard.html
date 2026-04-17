@@ -23,10 +23,37 @@
     <div id="header"></div>
 
     <main>
-      <h1 class="greetingH1"></h1>
+      <img class="main_bg" src="../elements/join_bg.gif" />
+      <h1 class="greeting_hidden"></h1>
+      <section class="user_surveySection">
+        <h1 class="survey_title"><b>Now...</b> Tell us about yourself!</h1>
+        <hr class="divider" />
+        <div class="question-box" id="question-box">
+          <h2 id="question-text"></h2>
+
+          <div id="progress-circles">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+
+          <div id="options-container"></div>
+        </div>
+
+        <h2 class="end_h2">You just took a very important step...</h2>
+        <h2 class="end_sub">
+          <b>You set a goal</b>, Now it's time to achieve it!
+        </h2>
+      </section>
     </main>
 
     <script src="../scripts/header.js"></script>
     <script type="module" src="../scripts/google-login.js"></script>
+    <script
+      type="module"
+      src="../scripts/dashboard scripts/user_survey.js"
+    ></script>
   </body>
 </html>
