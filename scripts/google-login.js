@@ -52,7 +52,7 @@ export async function getUserData() {
   } = await supabaseClient.auth.getSession();
   if (!session) return null;
   return {
-    name: session.user.user_metadata.full_name,
+    name: session.user.user_metadata.full_name.split(" ")[0],
     email: session.user.email,
   };
 }

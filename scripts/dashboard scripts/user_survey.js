@@ -77,7 +77,7 @@ function showQuestion(index) {
         document.querySelector(".survey_title").innerText =
           "Those are some great goals!";
         document.querySelector(".end_h2").innerText =
-          `You just took a very important step ${name}..`;
+          `You just took a very important step ${name}...`;
       }
     });
   });
