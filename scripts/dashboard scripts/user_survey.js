@@ -1,4 +1,4 @@
-import { getUserData } from "../google-login.js";
+import { getUserData, saveUserProfile } from "../google-login.js";
 
 let currentIndex = 0;
 
@@ -48,7 +48,35 @@ const questions = [
 
 const answers = {};
 
-/*answers["age_group"] =*/
+async function generateUserDescription(answers, name) {
+  const prompt = `Based on this user's survey answers, write a short 2-3 sentence motivational description of who they are and what they're working toward. Keep it warm, personal, and encouraging. Do not use bullet points.
+
+User's name: ${name}
+Age group: ${answers.age_group}
+Hobbies: ${answers.hobbies}
+Goal: ${answers.talent_goal}
+Target streak: ${answers.streak_goal}
+Motivation: ${answers.goal_reason}`;
+
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 1000,
+        messages: [{ role: "user", content: prompt }],
+      }),
+    });
+
+    const data = await response.json();
+    return data.content?.[0]?.text ?? "";
+  } catch {
+    return "";
+  }
+}
 
 function showQuestion(index) {
   const q = questions[index];
@@ -72,6 +100,15 @@ function showQuestion(index) {
       } else {
         const user = await getUserData();
         const name = user ? user.name : "there";
+
+        const aiDescription = await generateUserDescription(answers, name);
+
+        if (user) {
+          await saveUserProfile(user.id, {
+            surveyAnswers: answers,
+            aiDescription,
+          });
+        }
 
         document.body.classList.add("hide_survey");
         document.querySelector(".survey_title").innerText =

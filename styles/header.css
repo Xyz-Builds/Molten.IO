@@ -52,8 +52,7 @@ header {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   height: 70px;
-  width: 90%;
-  border-radius: 100px;
+  width: 100%;
   position: fixed;
   z-index: 1000;
 }
@@ -83,7 +82,7 @@ header img {
   width: 45px;
   height: 43px;
   bottom: 1px;
-  left: 23px;
+  left: 3vw;
 }
 
 header .theme_button {
@@ -132,6 +131,8 @@ header img:hover {
 
 .account-buttons {
   display: flex;
+  position: absolute;
+  right: 5%;
   gap: 8%;
 }
 
@@ -154,7 +155,7 @@ header img:hover {
 .sign-up-button:hover,
 .login-button:hover {
   background-color: rgb(88, 11, 44);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   text-decoration: underline;
 }
 

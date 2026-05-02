@@ -60,7 +60,7 @@ main {
 }
 
 .divider {
-  width: 300px;
+  width: 80%;
   margin-top: 4%;
   margin-bottom: 5%;
 }
@@ -70,8 +70,8 @@ main {
   margin-bottom: 6%;
   color: white;
   justify-self: center;
-  font-size: 35px;
-  font-weight: 500;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 .question-box button {
