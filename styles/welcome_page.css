@@ -7,21 +7,21 @@
   }
 }
 
-@keyframes slideIn_left {
+@keyframes slideDown {
   0% {
-    left: -250px;
+    top: -250px;
   }
   100% {
-    left: 80px;
+    top: 2px;
   }
 }
 
-@keyframes slideIn_left2 {
+@keyframes slideDown2 {
   0% {
-    left: -670px;
+    top: -670px;
   }
   100% {
-    left: 80px;
+    top: 20px;
   }
 }
 
@@ -40,14 +40,14 @@
   position: relative;
   letter-spacing: 1px;
   color: white;
-  left: 40px;
+  text-align: center;
   font-size: 40px;
   font-family: Major Mono Display;
   z-index: 2;
 }
 
 .welcome_section h2 {
-  animation: slideIn_left 4s forwards;
+  animation: slideDown 2s forwards;
   font-family: Poiret One;
 }
 
@@ -58,22 +58,46 @@
   -webkit-background-clip: text;
 }
 
+@keyframes breathe {
+  0%,
+  100% {
+    font-weight: 400;
+  }
+
+  50% {
+    font-weight: 600;
+  }
+}
+
 .welcome_section b {
+  animation: breathe 3s ease-in-out infinite;
+  font-weight: 400;
+  font-size: 70px;
   background: linear-gradient(to right, rgb(243, 144, 139), white);
-  font-weight: 300;
-  font-size: 50px;
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
 }
 
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 .welcome_section .label {
-  animation: slideIn_left 3s forwards;
-  font-size: 80px;
+  animation: slideDown 4s forwards;
+  animation: bounce 4s ease-in-out infinite;
+  padding-bottom: 2.5%;
+  font-size: 100px;
 }
 
 .welcome_section .label2 {
-  animation: slideIn_left2 6s forwards;
+  animation: slideDown2 4s forwards;
   font-family: Montserrat;
   font-size: 40px;
   font-weight: 500;
